@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Fontdiner+Swanky&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+    font-family: "Fontdiner Swanky", serif;
+    color: #EDEADE;
+}
+
+
+/* Body */
+body{
+    background: #0d100f;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+
+/* Background */
+#hero {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+}
+
+#backgroundVideo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Main */
+#main {
+    background-color: rgba(13, 16, 15, 0.7);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: min(600px, 70vw);
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.title {
+    text-align: center; 
+}
+
+.header {
+    font-size: min(44px, 8vw);
+    margin: 0;
+    animation-duration: 3s;
+    animation-name: moving;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+
+@keyframes moving {
+    from {
+        left: -10%;
+    }
+    to {
+        left: 10%;
+    }
+}
+
+
+.forms {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form_input > * {
+    display: block;
+    font-size: 16px;
+    width: min(300px, 40vw);
+}
+
+.form_input > input {
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0);
+    color: #EDEADE;
+}
+
+.form_input > input:invalid {
+    border-color: #EDEADE;
+}
+
+.form_input > input:valid {
+    border-color: rgba(0,0,0,0);
+}
+
+#submit {
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+#submit:hover {
+    color: #800000;
+}
