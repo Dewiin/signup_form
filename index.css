@@ -1,112 +1,134 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Fontdiner+Swanky&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Fontdiner+Swanky&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 
-
-* {
-    font-family: "Fontdiner Swanky", serif;
-    color: #EDEADE;
+:root {
+    --header: 20vh;
+    --footer: 20vh;
 }
 
+@font-face {
+    font-family: "Norse Bold";
+    src: url("assets/Norse-Bold.otf") format("opentype");
+}
 
-/* Body */
-body{
-    background: #0d100f;
+* {
+    font-family: "Manrope", sans-serif;
+}
+
+body {
     margin: 0;
     overflow: hidden;
 }
 
-
-
-/* Background */
-#hero {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    z-index: -1;
-}
-
-#backgroundVideo {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-/* Main */
 #main {
-    background-color: rgba(13, 16, 15, 0.7);
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;  
 }
 
-.content {
-    width: min(600px, 70vw);
-    height: 70vh;
+#backgroundImage {
+    background: url("assets/unsplash.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 45vw;
+    z-index: -1;    
+}
+
+#backgroundImage div {
+    display: flex;
+    height: 10vh;     
+    width: 100%;  
+    padding: 2rem 0;
+    font-size: 8vh;
+    align-items: center;
+    justify-content: center;
+    font-family: "Norse Bold";
+    background: rgba(0,0,0,0.5);
+    position: relative;
+    top: 30%;
+    color: white;
+}
+
+#logo {
+    object-fit: contain;
+    height: 100%;
+}
+
+#content {
+    background: hsl(0, 0%, 98%);
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.title {
-    text-align: center; 
+    justify-content: center;
 }
 
 .header {
-    font-size: min(44px, 8vw);
-    margin: 0;
-    animation-duration: 3s;
-    animation-name: moving;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    position: relative;
+    font-weight: 600;
+    padding: 3rem;
+    font-size: min(24px, 3vmin);
+    height: var(--header);
+}
+.header > p {
+    width: 40vw;
 }
 
-@keyframes moving {
-    from {
-        left: -10%;
-    }
-    to {
-        left: 10%;
-    }
+.form {
+    background: #FFFFFF;
+    height: fit-content;
+    padding: 3rem;
+    box-shadow: 5px 5px 5px lightgray;
+    border: 1px solid #E5E7EB;
 }
 
+.row {
+    display: flex;
+    gap: 5rem;
+}
 
-.forms {
-    overflow: hidden;
+.inputs {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    gap: 2rem;
 }
 
-.form_input > * {
+input{
     display: block;
-    font-size: 16px;
-    width: min(300px, 40vw);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #E5E7EB;
+    width: 15vw;
 }
 
-.form_input > input {
-    padding: 0.5rem;
-    border-radius: 10px;
-    background-color: rgba(0,0,0,0);
-    color: #EDEADE;
+label {
+    font-size: 12px;
+    font-weight: 600;
 }
 
-.form_input > input:invalid {
-    border-color: #EDEADE;
+.lets {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
 }
 
-.form_input > input:valid {
-    border-color: rgba(0,0,0,0);
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    height: var(--footer);
+    font-weight: 700;
 }
 
-#submit {
-    background-color: rgba(0,0,0,0);
+#create {
+    background-color: #596D48;
     border: none;
+    padding: 1rem 4rem;
+    color: #FFFFFF;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px lightgray;
+    max-width: fit-content;
 }
 
-#submit:hover {
-    color: #800000;
+a {
+    color: #596D48;
+    text-decoration: none;
 }
+
+
