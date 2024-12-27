@@ -96,6 +96,11 @@ input{
     width: 15vw;
 }
 
+input:focus {
+    border: 1px solid blue;
+    box-shadow: 5px 5px 10px lightgray;
+}
+
 label {
     font-size: 12px;
     font-weight: 600;
@@ -126,9 +131,20 @@ label {
     max-width: fit-content;
 }
 
+#create:hover {
+    cursor: pointer;
+    box-shadow: 10px 10px 10px lightgray;
+}
+
 a {
     color: #596D48;
     text-decoration: none;
 }
+a:hover {
+    text-shadow: 10px 10px 10px lightgray;
+}
 
+#password:invalid, #password2:invalid {
+    border-color: red;
+}
 
