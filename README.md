@@ -37,7 +37,7 @@ A simple and responsive sign-up form built with HTML, CSS, and JavaScript. Valid
 
 
 ## Future Improvements
-- [ ] Add responsive design for mobile users
+- [ ] Add responsive design for mobile users 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
 
